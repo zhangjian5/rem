@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- rem实现适配 -->
+    <script>
+        ! function (e) {
+            function t(a) {
+                if (i[a]) return i[a].exports;
+                var n = i[a] = {
+                    exports: {},
+                    id: a,
+                    loaded: !1
+                };
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100,
+                    n = t || 1,
+                    r = i.document,
+                    o = navigator.userAgent,
+                    d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+                    l = o.match(/U3\/((\d+|\.){5,})/i),
+                    c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+                    p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+                    s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s,
+                    m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)),
+                    m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u +
+                        ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize =
+                    a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+    <div class="found">
+        <div class="title">
+            <img src="https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/find_img_clo_02.png" alt="">
+        </div>
+        <div class="number  t_c">
+            <div class="number-center">
+                <p class="text">积分(个)</p>
+                <p class="num">10</p>
+            </div>
+            <div class="number-center">
+                <p class="text">已邀请(人)</p>
+                <p class="num">0</p>
+            </div>
+            <div class="number-center">
+                <p class="text">累计佣金(元)</p>
+                <p class="num">0</p>
+            </div>
+        </div>
+        <div class="find_jf">
+            <div class="jf">
+                <a href="#">
+                        <figure>
+                    <img src="https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/find_tc_07.png" alt="">
+                    <figcaption class="t_c">积分商城</figcaption>
+                </figure> 
+                </a>
+            </div>
+            <div class="jf">
+                <a href="#">
+                        <figure>
+                    <img src="https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/find_tc_07.png" alt="">
+                    <figcaption class="t_c">积分商城</figcaption></figure> 
+                </a>
+            </div>
+        </div>
+        <div class="list_f ">
+            <i class="iconfont iconL">&#xe626;</i>
+            <span>邀请好友</span>
+            <i class="iconfont iconR">&#xe601;</i>
+        </div>
+        <div class="list_f">
+            <i class="iconfont iconL">&#xe626;</i>
+            <span>邀请好友</span>
+            <i class="iconfont iconR">&#xe601;</i>
+        </div>
+        <div class="list_f">
+            <i class="iconfont iconL">&#xe626;</i>
+            <span>邀请好友</span>
+            <i class="iconfont iconR">&#xe601;</i>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- 空白格 -->
+    <div class="bottmHight"></div>
+    <!-- 最下面的定位 -->
+    <div class="fixedAll">
+        <div class="fixedBody jsFixedhref">
+            <a href="/" class="fixedhref">
+                <i class="iconfont t_c">&#xe63d;</i>
+                <p class="text t_c">首页</p>
+            </a>
+        </div>
+        <div class="fixedBody  jsFixedhref ">
+            <a href="/src/investment/investment.html" class="fixedhref">
+                <i class="iconfont t_c">&#xe63d;</i>
+                <p class="text t_c">投资</p>
+            </a>
+        </div>
+        <div class="fixedBody jsFixedhref active">
+            <a href="/src/found/found.html" class="fixedhref">
+                <i class="iconfont t_c">&#xe63d;</i>
+                <p class="text t_c">发现</p>
+            </a>
+        </div>
+        <div class="fixedBody jsFixedhref">
+            <a href="/src/my/my.html" class="fixedhref">
+                <i class="iconfont t_c">&#xe63d;</i>
+                <p class="text t_c">我的</p>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+
+</html>

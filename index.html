@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Expires" content="0" />
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>投之家</title>
+    <!-- rem实现适配 -->
+    <script>
+        ! function (e) {
+            function t(a) {
+                if (i[a]) return i[a].exports;
+                var n = i[a] = {
+                    exports: {},
+                    id: a,
+                    loaded: !1
+                };
+                return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+            }
+            var i = {};
+            return t.m = e, t.c = i, t.p = "", t(0)
+        }([function (e, t) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var i = window;
+            t["default"] = i.flex = function (e, t) {
+                var a = e || 100,
+                    n = t || 1,
+                    r = i.document,
+                    o = navigator.userAgent,
+                    d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+                    l = o.match(/U3\/((\d+|\.){5,})/i),
+                    c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+                    p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+                    s = i.devicePixelRatio || 1;
+                p || d && d[1] > 534 || c || (s = 1);
+                var u = 1 / s,
+                    m = r.querySelector('meta[name="viewport"]');
+                m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)),
+                    m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u +
+                        ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize =
+                    a / 2 * s * n + "px"
+            }, e.exports = t["default"]
+        }]);
+        flex(100, 1);
+    </script>
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/swiper.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+</head>
+
+<body>
+    <!-- 顶部logo -->
+    <div class="toplogo">
+        <div class="imgBox">
+            <img src="https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/headLogo.png" alt="">
+        </div>
+    </div>
+    <!-- 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page1">slider1</div>
+            <div class="swiper-slide page2">slider2</div>
+            <div class="swiper-slide page3">slider3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- 公告 -->
+    <div class="notice box_s clearfix">
+        <div class="iconBox left">
+            <i class="iconfont">&#xe501;</i>
+        </div>
+        <div class="textBox">
+            <p>公告1</p>
+            <p>公告2</p>
+            <p>公告3</p>
+            <p>公告4</p>
+            <p>公告5</p>
+            <p>公告6</p>
+        </div>
+    </div>
+    <!-- fourBox -->
+    <div class="fontBox">
+        <div class="fontOne font">
+            <a href="#" class="fontA">
+                <div class="fontImg">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                </div>
+                <p class="text t_c">信息披露</p>
+            </a>
+        </div>
+        <div class="fontTwo font">
+            <a href="#" class="fontA">
+                <div class="fontImg">
+                    <i class="iconfont t_c">&#x3460;</i>
+                </div>
+                <p class="text t_c">信息披露</p>
+                </a>
+        </div>
+        <div class="fontThree font">
+
+            <a href="#" class="fontA">
+                <div class="fontImg">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                </div>
+                <p class="text t_c">信息披露</p>
+            </a>
+        </div>
+        <div class="fontFour font">
+            <a href="#" class="fontA">
+                <div class="fontImg">
+                    <i class="iconfont t_c">&#x3460;</i>
+                </div>
+                <p class="text t_c">信息披露</p>
+                </a>
+        </div>
+    </div>
+    <!-- 标的 -->
+    <div class="index-center">
+        <div class="title clearfix">
+            题目<span class="money right">剩余多少钱</span>
+        </div>
+        <div class="content">
+            <div class="year contentT">
+                <p class="rest">10<span>%</span></p>
+                <p class="text">历史年化</p>
+            </div>
+            <div class="time contentT">
+                <p  class="timerest">6个月</p>
+                <p class="text">项目期限</p>
+            </div>
+            <div class="button contentT">
+                <a href="#" class="t_c">立即投资</a>
+            </div>
+        </div>
+    </div>
+    <div class="index-center">
+        <div class="title clearfix">
+            题目<span class="money right">剩余多少钱</span>
+        </div>
+        <div class="content">
+            <div class="year contentT">
+                <p class="rest">10<span>%</span></p>
+                <p class="text">历史年化</p>
+            </div>
+            <div class="time contentT">
+                <p  class="timerest">6个月</p>
+                <p class="text">项目期限</p>
+            </div>
+            <div class="button contentT">
+                <a href="#" class="t_c">立即投资</a>
+            </div>
+        </div>
+    </div>
+    <div class="index-center">
+        <div class="title clearfix">
+            题目<span class="money right">剩余多少钱</span>
+        </div>
+        <div class="content">
+            <div class="year contentT">
+                <p class="rest">10<span>%</span></p>
+                <p class="text">历史年化</p>
+            </div>
+            <div class="time contentT">
+                <p  class="timerest">6个月</p>
+                <p class="text">项目期限</p>
+            </div>
+            <div class="button contentT">
+                <a href="#" class="t_c">立即投资</a>
+            </div>
+        </div>
+    </div>
+    <div class="index-center">
+        <div class="title clearfix">
+            题目<span class="money right">剩余多少钱</span>
+        </div>
+        <div class="content">
+            <div class="year contentT">
+                <p class="rest">10<span>%</span></p>
+                <p class="text">历史年化</p>
+            </div>
+            <div class="time contentT">
+                <p  class="timerest">6个月</p>
+                <p class="text">项目期限</p>
+            </div>
+            <div class="button contentT">
+                <a href="#" class="t_c">立即投资</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <p class="know t_c">
+            <a href="#" class="t_c">了解我们的投资></a>
+        </p>
+        <img src="https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/mobileShield.png" alt="">
+    </div>
+    <!-- 空白格 -->
+    <div class="bottmHight"></div>
+    <!-- 最下面的定位 -->
+    <div class="fixedAll">
+        <div class="fixedBody jsFixedhref active">
+                <a href="/" class="fixedhref">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                    <p class="text t_c">首页</p>
+                </a>
+        </div>
+        <div class="fixedBody jsFixedhref">
+                <a href="/src/investment/investment.html" class="fixedhref">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                    <p class="text t_c">投资</p>
+                </a>
+        </div>
+        <div class="fixedBody jsFixedhref">
+                <a href="/src/found/found.html" class="fixedhref">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                    <p class="text t_c">发现</p>
+                </a>
+        </div>
+        <div class="fixedBody jsFixedhref">
+                <a href="/src/my/my.html" class="fixedhref">
+                    <i class="iconfont t_c">&#xe63d;</i>
+                    <p class="text t_c">我的</p>
+                </a>
+        </div>
+    </div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 2000, //可选选项，自动滑动
+        autoplayDisableOnInteraction: false,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+    })
+       
+</script>
+
+</html>

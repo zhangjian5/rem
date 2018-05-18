@@ -1,0 +1,897 @@
+@charset "UTF-8";
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+[hidefocus], summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%;
+}
+
+sup, sub {
+  font-size: 83%;
+}
+
+pre, code, kbd, samp {
+  font-family: inherit;
+}
+
+q:before, q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label, summary {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold;
+}
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none;
+}
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial,\5b8b\4f53;
+  color: #333;
+  outline: 0;
+}
+
+body {
+  background: #fff;
+}
+
+a, a:hover {
+  color: #333;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f3f9f9;
+  font-family: 'Microsoft YaHei', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.t_l {
+  text-align: left;
+}
+
+.t_r {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  /* 触发 hasLayout */
+  zoom: 1;
+}
+
+.box_s {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login .title,
+.regist .title {
+  height: 3.7rem;
+}
+
+.login .title .img,
+.regist .title .img {
+  width: 2.1rem;
+  height: 0.75rem;
+  background: url("../img/login/login.jpg") no-repeat center/100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.05rem;
+  top: 1.3rem;
+}
+
+.login .title .text,
+.regist .title .text {
+  width: 100%;
+  position: absolute;
+  top: 2.3rem;
+  font-size: 0.36rem;
+  color: #808080;
+}
+
+.login form .ipone,
+.login form .pwd,
+.login form .yanzm,
+.login form .invited,
+.regist form .ipone,
+.regist form .pwd,
+.regist form .yanzm,
+.regist form .invited {
+  width: 90%;
+  border-bottom: 1px solid #cccccc;
+  margin: 0.2rem auto 0;
+  position: relative;
+}
+
+.login form .ipone i,
+.login form .pwd i,
+.login form .yanzm i,
+.login form .invited i,
+.regist form .ipone i,
+.regist form .pwd i,
+.regist form .yanzm i,
+.regist form .invited i {
+  color: #5075c6;
+  font-size: 0.44rem;
+  vertical-align: middle;
+}
+
+.login form .ipone i.yan,
+.login form .pwd i.yan,
+.login form .yanzm i.yan,
+.login form .invited i.yan,
+.regist form .ipone i.yan,
+.regist form .pwd i.yan,
+.regist form .yanzm i.yan,
+.regist form .invited i.yan {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  color: #ccc;
+}
+
+.login form .ipone input,
+.login form .pwd input,
+.login form .yanzm input,
+.login form .invited input,
+.regist form .ipone input,
+.regist form .pwd input,
+.regist form .yanzm input,
+.regist form .invited input {
+  width: 80%;
+  height: 1rem;
+  line-height: 1rem;
+  border: none;
+  padding-left: 0.25rem;
+  box-sizing: border-box;
+  font-size: 0.28rem;
+}
+
+.login form .ipone ::-webkit-input-placeholder,
+.login form .pwd ::-webkit-input-placeholder,
+.login form .yanzm ::-webkit-input-placeholder,
+.login form .invited ::-webkit-input-placeholder,
+.regist form .ipone ::-webkit-input-placeholder,
+.regist form .pwd ::-webkit-input-placeholder,
+.regist form .yanzm ::-webkit-input-placeholder,
+.regist form .invited ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+  font-size: 0.28rem;
+  color: #ccc;
+}
+
+.login form .ipone :-moz-placeholder,
+.login form .pwd :-moz-placeholder,
+.login form .yanzm :-moz-placeholder,
+.login form .invited :-moz-placeholder,
+.regist form .ipone :-moz-placeholder,
+.regist form .pwd :-moz-placeholder,
+.regist form .yanzm :-moz-placeholder,
+.regist form .invited :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+  font-size: 28rem;
+  color: #ccc;
+}
+
+.login form .ipone ::-moz-placeholder,
+.login form .pwd ::-moz-placeholder,
+.login form .yanzm ::-moz-placeholder,
+.login form .invited ::-moz-placeholder,
+.regist form .ipone ::-moz-placeholder,
+.regist form .pwd ::-moz-placeholder,
+.regist form .yanzm ::-moz-placeholder,
+.regist form .invited ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+  font-size: 28rem;
+  color: #ccc;
+}
+
+.login form .ipone :-ms-input-placeholder,
+.login form .pwd :-ms-input-placeholder,
+.login form .yanzm :-ms-input-placeholder,
+.login form .invited :-ms-input-placeholder,
+.regist form .ipone :-ms-input-placeholder,
+.regist form .pwd :-ms-input-placeholder,
+.regist form .yanzm :-ms-input-placeholder,
+.regist form .invited :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+  font-size: 28rem;
+  color: #ccc;
+}
+
+.login form button,
+.regist form button {
+  display: block;
+  width: 90%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  background-color: #5075c6;
+  font-size: 0.36rem;
+  border: none;
+  border-radius: 5px;
+  margin: 0.9rem auto 0.45rem;
+}
+
+.login form .otherLogin,
+.regist form .otherLogin {
+  min-height: 0.6rem;
+  line-height: 0.6rem;
+}
+
+.login form .otherLogin a,
+.regist form .otherLogin a {
+  color: #ccc;
+  font-size: 0.28rem;
+}
+
+.login form .otherLogin span,
+.regist form .otherLogin span {
+  margin: 0 0.3rem;
+  color: #ccc;
+  font-size: 0.3rem;
+}
+
+.login .weixinlogin,
+.regist .weixinlogin {
+  width: 2rem;
+  color: #ccc;
+  margin: 0.4rem auto 0;
+}
+
+.login .weixinlogin i,
+.regist .weixinlogin i {
+  font-size: 1rem;
+  color: #2ecc77;
+}
+
+.login .weixinlogin p,
+.regist .weixinlogin p {
+  font-size: 0.28rem;
+}
+
+.regist form .yanzm span.text,
+.regist form .ipone span.text,
+.regist form .pwd span.text,
+.regist form .invited span.text {
+  font-size: 0.32rem;
+  color: #666666;
+}
+
+.regist form .yanzm .get,
+.regist form .ipone .get,
+.regist form .pwd .get,
+.regist form .invited .get {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  color: #adddf4;
+  border: 1px solid #adddf4;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 0.32rem;
+}
+
+.toplogo {
+  width: 100%;
+  padding: 0.3rem 0;
+  background: linear-gradient(to left, #0093b1, #1ea89b);
+}
+
+.toplogo .imgBox {
+  width: 30%;
+  max-width: 1.9rem;
+  margin: auto;
+}
+
+.toplogo .imgBox img {
+  display: block;
+  width: 1.9rem;
+  height: 0.32rem;
+  max-width: 100%;
+  border: none;
+}
+
+.swiper-container {
+  height: 3rem;
+}
+
+.swiper-container .page1 {
+  background-image: url("https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-05-04/ArticleModel/72b192f8-e832-4e0a-b54b-46efb9b39290.png");
+}
+
+.swiper-container .page2 {
+  background-image: url("https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-03-26/ArticleModel/165de943-066c-4629-ad5b-de26aac4ce2f.png");
+}
+
+.swiper-container .page3 {
+  background-image: url("https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-03-30/ArticleModel/e24a3be1-d8bf-4465-b1c8-13ac5f3a9713.png");
+}
+
+.notice {
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0.22rem;
+  background: #fff;
+}
+
+.notice .iconBox {
+  width: 0.32rem;
+  margin-right: 0.14rem;
+}
+
+.notice .iconBox i {
+  font-size: 0.32rem;
+}
+
+.notice .textBox {
+  font-size: 0.28rem;
+  height: 0.36rem;
+  line-height: 0.36rem;
+  overflow: hidden;
+}
+
+.fontBox {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.fontBox .font {
+  flex: 1;
+  padding: 0.2rem 0;
+}
+
+.fontBox .font .fontA {
+  display: block;
+}
+
+.fontBox .font .fontA .fontImg {
+  margin-bottom: 0.05rem;
+}
+
+.fontBox .font .fontA .fontImg i {
+  display: block;
+  font-size: 0.45rem;
+}
+
+.fontBox .font .fontA .text {
+  font-size: 0.28rem;
+}
+
+.index-center {
+  background: #fff;
+  padding: 0.15rem 0.22rem;
+  margin-bottom: 0.2rem;
+  clear: both;
+}
+
+.index-center .title {
+  color: #333;
+  font-size: 0.32rem;
+  padding-right: 0.15rem;
+}
+
+.index-center .content {
+  display: flex;
+  padding: 0.25rem 0;
+}
+
+.index-center .content .contentT {
+  flex: 1;
+}
+
+.index-center .content .year .rest,
+.index-center .content .time .rest {
+  font-size: 0.48rem;
+  color: #f6570b;
+  margin-bottom: 0.1rem;
+}
+
+.index-center .content .year .rest span,
+.index-center .content .time .rest span {
+  font-size: 0.28rem;
+}
+
+.index-center .content .year .timerest,
+.index-center .content .time .timerest {
+  font-size: 0.48rem;
+  color: #333;
+  margin-bottom: 0.1rem;
+}
+
+.index-center .content .year .text,
+.index-center .content .time .text {
+  font-size: 0.24rem;
+  color: #999;
+}
+
+.index-center .content .button a {
+  display: block;
+  width: 80%;
+  padding: 0.2rem 0;
+  border-radius: 1rem;
+  background: #1fc3b5;
+  margin: 0.05rem auto 0;
+  color: #fff;
+  font-size: 0.32rem;
+}
+
+.footer {
+  padding: 0 0.22rem 0.15rem;
+}
+
+.footer .know {
+  min-height: 0.6rem;
+  line-height: 0.6rem;
+  padding: 0.15rem 0;
+}
+
+.footer .know a {
+  font-size: 0.32rem;
+  color: #333;
+}
+
+.bottmHight {
+  height: 0.01rem;
+  padding-bottom: 1rem;
+}
+
+.fixedAll {
+  display: flex;
+  min-width: 320px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background: #fff;
+  padding: 0.1rem 0;
+}
+
+.fixedAll .fixedBody {
+  flex: 1;
+}
+
+.fixedAll .fixedBody .fixedhref i {
+  display: block;
+  margin: auto;
+  font-size: 0.48rem;
+}
+
+.fixedAll .fixedBody .fixedhref .text {
+  font-size: 0.24rem;
+}
+
+.fixedAll .fixedBody.active .fixedhref {
+  color: red;
+}
+
+.investment {
+  padding: 0.1rem 0.3rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-bottom: 0.3rem;
+}
+
+.investment .title {
+  border-bottom: 1px solid #eeeeee;
+  text-align: left;
+  padding: 0.1rem 0;
+  margin-bottom: 0.1rem;
+  color: #666;
+  font-size: 0.32rem;
+}
+
+.investment .contentBox {
+  display: flex;
+  padding-bottom: 0.2rem;
+}
+
+.investment .contentBox .year,
+.investment .contentBox .yue {
+  margin-top: 0.15rem;
+  flex: 2;
+}
+
+.investment .contentBox .year .number,
+.investment .contentBox .yue .number {
+  font-size: 0.48rem;
+}
+
+.investment .contentBox .year .percent,
+.investment .contentBox .yue .percent {
+  font-size: 0.24rem;
+}
+
+.investment .contentBox .year .text,
+.investment .contentBox .yue .text {
+  font-size: 0.32rem;
+  margin-top: 0.15rem;
+}
+
+.investment .contentBox .year {
+  border-right: 1px solid #ccc;
+}
+
+.investment .contentBox .yue {
+  padding-left: 0.5rem;
+}
+
+.investment .contentBox .circleBox {
+  flex: 1;
+  margin-top: 0.1rem;
+}
+
+.investment .contentBox .circleBox .circle {
+  width: 1.1rem;
+  height: 1.1rem;
+  position: relative;
+  border-radius: 50%;
+  background: #facd1b;
+  margin: auto;
+}
+
+.investment .contentBox .circleBox .circle .pie_left,
+.investment .contentBox .circleBox .circle .pie_right {
+  width: 1.1rem;
+  height: 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.investment .contentBox .circleBox .circle .pie_left .left1,
+.investment .contentBox .circleBox .circle .pie_left .right1,
+.investment .contentBox .circleBox .circle .pie_right .left1,
+.investment .contentBox .circleBox .circle .pie_right .right1 {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.investment .contentBox .circleBox .circle .pie_left .right1,
+.investment .contentBox .circleBox .circle .pie_right .right1 {
+  clip: rect(0, auto, auto, 0.55rem);
+}
+
+.investment .contentBox .circleBox .circle .pie_left .left1,
+.investment .contentBox .circleBox .circle .pie_right .left1 {
+  clip: rect(0, 0.55rem, auto, 0);
+}
+
+.investment .contentBox .circleBox .circle .mask {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  left: 0.1rem;
+  top: 0.1rem;
+  background: #FFF;
+  position: absolute;
+  text-align: center;
+  line-height: 0.9rem;
+  font-size: 0.32rem;
+}
+
+.found {
+  margin-bottom: 1.2rem;
+}
+
+.found .title img {
+  display: block;
+}
+
+.found .number {
+  display: flex;
+  padding: 0.2rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.found .number .number-center {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+
+.found .number .number-center p.text {
+  color: #888;
+  font-size: 0.28rem;
+}
+
+.found .number .number-center p.num {
+  color: #e94c3d;
+  font-size: 0.36rem;
+  padding-top: 0.2rem;
+}
+
+.found .number .number-center:last-child {
+  border: none;
+}
+
+.found .find_jf {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 0.3rem 0;
+  padding: 0.4rem 0;
+}
+
+.found .find_jf .jf {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+
+.found .find_jf .jf a img {
+  display: block;
+  margin: auto;
+}
+
+.found .find_jf .jf a figcaption {
+  font-size: 0.32rem;
+}
+
+.found .find_jf .jf::last-child {
+  border: none;
+}
+
+.list_f {
+  background-color: #fff;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-bottom: 0.2rem;
+  padding: 0.2rem 5%;
+  position: relative;
+}
+
+.list_f i.iconL {
+  font-size: 0.5rem;
+  padding-right: 0.2rem;
+}
+
+.list_f span {
+  font-size: 0.32rem;
+}
+
+.list_f i.iconR {
+  font-size: 0.36rem;
+  position: absolute;
+  top: 0.32rem;
+  right: 0.2rem;
+}
+
+.my {
+  margin-bottom: 1.2rem;
+}
+
+.my .title {
+  background: url("https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/find_head_02.jpg");
+  background-size: 100%;
+  color: #FFF;
+  padding-top: 0.3rem;
+}
+
+.my .title a {
+  display: inline-block;
+}
+
+.my .title a img {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.my .title a span {
+  display: inline-block;
+  font-size: 0.32rem;
+  color: #FFF;
+  line-height: 0.9rem;
+  vertical-align: top;
+}
+
+.my .title .money {
+  padding: 0.6rem 0 1.5rem;
+}
+
+.my .title .money p.text {
+  font-size: 0.36rem;
+}
+
+.my .title .money p.number {
+  font-size: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.my .center {
+  display: flex;
+  background-color: #fff;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.my .center .center-left {
+  flex: 1;
+}
+
+.my .center .center-left .text {
+  font-size: 0.36rem;
+  color: #ccc;
+}
+
+.my .center .center-left .number {
+  color: red;
+  font-size: 0.32rem;
+  padding-top: 0.2rem;
+}
+
+.my .content {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.my .content .withdraw, .my .content .recharge {
+  width: 50%;
+  float: left;
+  font-size: 0.36rem;
+  border-right: 1px solid #ccc;
+  padding: 0.3rem 0;
+}
+
+.my .content .recharge {
+  border: none;
+}
+
+.my .user_list {
+  display: flex;
+  padding: 0.2rem 0;
+  margin: 0.2rem 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.my .user_list .list {
+  flex: 1;
+}
+
+.my .user_list .list i {
+  font-size: 0.5rem;
+}
+
+.my .user_list .list p {
+  color: #333;
+  font-size: 0.28rem;
+}
+
+.my .list_f {
+  padding: 0.1rem 5%;
+}
+
+.my .list_f i.iconR {
+  top: 0.2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 14px !important;
+  }
+}

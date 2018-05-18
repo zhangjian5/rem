@@ -1,0 +1,689 @@
+@import 'reset.scss';
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f3f9f9;
+    font-family: 'Microsoft YaHei', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.t_c {
+    text-align: center;
+}
+
+.t_l {
+    text-align: left;
+}
+
+.t_r {
+    text-align: right;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+
+.box_s {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+} // 计算尺寸函数
+@function Csize($size) {
+    @return ($size/100)*1rem;
+} // 设置图片居中
+@mixin bgc ($url,
+$width) {
+    background: url($url) no-repeat center /100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: Csize(-$width/2);
+} // 设置背景图片不考虑居中
+@mixin bg($url) {
+    background: url($url) no-repeat center /100% 100%;
+    position: absolute;
+} // 宽高
+@mixin size ($width,
+$height) {
+    width: Csize($width);
+    height: Csize($height);
+}
+
+//   登录的样式
+.login,
+.regist {
+    .title {
+        height: Csize(370);
+        .img {
+            @include size(210,
+            75);
+            @include bgc('../img/login/login.jpg',
+            210);
+            top: Csize(130);
+        }
+        .text {
+            width: 100%;
+            position: absolute;
+            top: 2.3rem;
+            font-size: 0.36rem;
+            color: #808080;
+        }
+    }
+    form {
+        .ipone,
+        .pwd,
+        .yanzm,
+        .invited {
+            width: 90%;
+            border-bottom: 1px solid #cccccc;
+            margin: Csize(20) auto 0;
+            position: relative;
+            i {
+                color: #5075c6;
+                font-size: 0.44rem;
+                vertical-align: middle;
+            }
+            i.yan {
+                position: absolute;
+                top: Csize(20);
+                right: Csize(20);
+                color: #ccc;
+            }
+            input {
+                width: 80%;
+                height: Csize(100);
+                line-height: Csize(100);
+                border: none;
+                padding-left: Csize(25);
+                box-sizing: border-box;
+                font-size: 0.28rem;
+            }
+            ::-webkit-input-placeholder {
+                /* WebKit browsers */
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+                font-size: 0.28rem;
+                color: #ccc;
+            }
+            :-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+                font-size: 28rem;
+                color: #ccc;
+            }
+            ::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+                font-size: 28rem;
+                color: #ccc;
+            }
+            :-ms-input-placeholder {
+                /* Internet Explorer 10+ */
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'sans-serif';
+                font-size: 28rem;
+                color: #ccc;
+            }
+        }
+        button {
+            display: block;
+            width: 90%;
+            height: Csize(80);
+            line-height: Csize(80);
+            color: #fff;
+            background-color: #5075c6;
+            font-size: 0.36rem;
+            border: none;
+            border-radius: 5px;
+            margin: Csize(90) auto Csize(45);
+        }
+        .otherLogin {
+            min-height: Csize(60);
+            line-height: Csize(60);
+            a {
+                color: #ccc;
+                font-size: 0.28rem;
+            }
+            span {
+                margin: 0 Csize(30);
+                color: #ccc;
+                font-size: 0.3rem;
+            }
+        }
+    }
+    .weixinlogin {
+        width: Csize(200);
+        color: #ccc;
+        margin: Csize(40) auto 0;
+        i {
+            font-size: 1rem;
+            color: #2ecc77;
+        }
+        p {
+            font-size: 0.28rem
+        }
+    }
+}
+
+.regist {
+    form {
+        .yanzm,
+        .ipone,
+        .pwd,
+        .invited {
+            span.text {
+                font-size: 0.32rem;
+                color: #666666;
+            }
+            .get {
+                position: absolute;
+                top: Csize(20);
+                right: 0;
+                color: #adddf4;
+                border: 1px solid #adddf4;
+                padding: Csize(15) Csize(30);
+                border-radius: Csize(30);
+                font-size: 0.32rem;
+            }
+        }
+    }
+}
+
+// 主页的顶部logo
+.toplogo {
+    width: 100%;
+    padding: Csize(30) 0;
+    background: linear-gradient(to left, #0093b1, #1ea89b);
+    .imgBox {
+        width: 30%;
+        max-width: Csize(190);
+        margin: auto;
+        img {
+            display: block;
+            @include size(190,
+            32);
+            max-width: 100%;
+            border: none;
+        }
+    }
+}
+
+// 轮播
+.swiper-container {
+    height: Csize(300);
+    .page1 {
+        background-image: url('https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-05-04/ArticleModel/72b192f8-e832-4e0a-b54b-46efb9b39290.png')
+    }
+    .page2 {
+        background-image: url('https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-03-26/ArticleModel/165de943-066c-4629-ad5b-de26aac4ce2f.png')
+    }
+    .page3 {
+        background-image: url('https://byrong.oss-cn-hangzhou.aliyuncs.com/data/upfiles/images/2018-03-30/ArticleModel/e24a3be1-d8bf-4465-b1c8-13ac5f3a9713.png')
+    }
+}
+
+// 公告
+.notice {
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    padding: Csize(22);
+    background: #fff;
+    .iconBox {
+        width: Csize(32);
+        margin-right: Csize(14);
+        i {
+            font-size: Csize(32);
+        }
+    }
+    .textBox {
+        font-size: Csize(28);
+        height: Csize(36);
+        line-height: Csize(36);
+        overflow: hidden;
+    }
+}
+
+// 四个标题
+.fontBox {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: Csize(20);
+    .font {
+        flex: 1;
+        padding: Csize(20) 0;
+        .fontA {
+            display: block;
+            .fontImg {
+                margin-bottom: Csize(5);
+                i {
+                    display: block;
+                    font-size: Csize(45);
+                }
+            }
+            .text {
+                font-size: Csize(28);
+            }
+        }
+    }
+}
+
+// 标的
+.index-center {
+    background: #fff;
+    padding: Csize(15) Csize(22);
+    margin-bottom: Csize(20);
+    clear: both;
+    .title {
+        color: #333;
+        font-size: Csize(32);
+        padding-right: Csize(15);
+        .money {}
+    }
+    .content {
+        display: flex;
+        padding: Csize(25) 0;
+        .contentT {
+            flex: 1;
+        }
+        .year,
+        .time {
+            .rest {
+                font-size: Csize(48);
+                color: #f6570b;
+                margin-bottom: Csize(10);
+                span {
+                    font-size: Csize(28);
+                }
+            }
+            .timerest {
+                font-size: Csize(48);
+                color: #333;
+                margin-bottom: Csize(10);
+            }
+            .text {
+                font-size: Csize(24);
+                color: #999;
+            }
+        }
+        .button {
+            a {
+                display: block;
+                width: 80%;
+                padding: Csize(20) 0;
+                border-radius: Csize(100);
+                background: #1fc3b5;
+                margin: Csize(5) auto 0;
+                color: #fff;
+                font-size: Csize(32);
+            }
+        }
+    }
+}
+
+// footer
+.footer {
+    padding: 0 Csize(22) Csize(15);
+    .know {
+        min-height: Csize(60);
+        line-height: Csize(60);
+        padding: Csize(15) 0;
+        a {
+            font-size: Csize(32);
+            color: #333;
+        }
+    }
+}
+
+.bottmHight {
+    height: Csize(1);
+    padding-bottom: Csize(100);
+}
+
+.fixedAll {
+    display: flex;
+    min-width: 320px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background: #fff;
+    padding: Csize(10) 0;
+    .fixedBody {
+        flex: 1;
+        .fixedhref {
+            i {
+                display: block;
+                margin: auto;
+                font-size: Csize(48);
+            }
+            .text {
+                font-size: Csize(24);
+            }
+        }
+    }
+    .fixedBody.active .fixedhref {
+        color: red;
+    }
+}
+
+// 投资页面
+.investment {
+    padding: Csize(10) Csize(30);
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-bottom: Csize(30);
+    .title {
+        border-bottom: 1px solid #eeeeee;
+        text-align: left;
+        padding: Csize(10) 0;
+        margin-bottom: Csize(10);
+        color: #666;
+        font-size: Csize(32);
+    }
+    .contentBox {
+        display: flex;
+        padding-bottom: Csize(20);
+        .year,
+        .yue {
+            margin-top: Csize(15);
+            flex: 2;
+            .number {
+                font-size: Csize(48);
+            }
+            .percent {
+                font-size: Csize(24);
+            }
+            .text {
+                font-size: Csize(32);
+                margin-top: Csize(15);
+            }
+        }
+        .year {
+            border-right: 1px solid #ccc;
+        }
+        .yue {
+            padding-left: Csize(50);
+        }
+        .circleBox {
+            flex: 1;
+            margin-top: Csize(10);
+            .circle {
+                width: Csize(110);
+                height: Csize(110);
+                position: relative;
+                border-radius: 50%;
+                background: rgb(250, 205, 27);
+                margin: auto;
+                .pie_left,
+                .pie_right {
+                    width: Csize(110);
+                    height: Csize(110);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    .left1,
+                    .right1 {
+                        display: block;
+                        width: Csize(110);
+                        height: Csize(110);
+                        background: #ccc;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        left: 0; // transform: rotate(30deg);
+                    }
+                    .right1 {
+                        clip: rect(0, auto, auto, Csize(55));
+                    }
+                    .left1 {
+                        clip: rect(0, Csize(55), auto, 0);
+                    }
+                }
+                .mask {
+                    width: Csize(90);
+                    height: Csize(90);
+                    border-radius: 50%;
+                    left: Csize(10);
+                    top: Csize(10);
+                    background: #FFF;
+                    position: absolute;
+                    text-align: center;
+                    line-height: Csize(90);
+                    font-size: Csize(32);
+                    ;
+                }
+            }
+        }
+    }
+}
+
+// 发现页面
+.found {
+    margin-bottom: Csize(120);
+    .title {
+        img {
+            display: block;
+        }
+    }
+    .number {
+        display: flex;
+        padding: Csize(20) 0;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        .number-center {
+            flex: 1;
+            border-right: 1px solid #ccc;
+            p.text {
+                color: #888;
+                font-size: Csize(28);
+            }
+            p.num {
+                color: #e94c3d;
+                font-size: Csize(36);
+                padding-top: Csize(20);
+            }
+        }
+        .number-center:last-child {
+            border: none;
+        }
+    }
+    .find_jf {
+        display: flex;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        margin: Csize(30) 0;
+        padding: Csize(40) 0;
+        .jf {
+            flex: 1;
+            border-right: 1px solid #ccc;
+            a {
+                img {
+                    display: block;
+                    margin: auto;
+                }
+                figcaption {
+                    font-size: Csize(32);
+                }
+            }
+        }
+        .jf::last-child {
+            border: none;
+        }
+    }
+}
+
+.list_f {
+    background-color: #fff;
+    margin: auto;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-bottom: Csize(20);
+    padding: Csize(20) 5%;
+    position: relative;
+    i.iconL {
+        font-size: Csize(50);
+        padding-right: Csize(20);
+    }
+    span {
+        font-size: Csize(32);
+    }
+    i.iconR {
+        font-size: Csize(36);
+        position: absolute;
+        top: Csize(32);
+        right: Csize(20);
+    }
+}
+// 个人主页
+.my {
+    margin-bottom: Csize(120);
+    .title {
+        background: url('https://www.byronginvest.com/themes/theme_default/images/mobileWeb/img/find_head_02.jpg');
+        background-size: 100%;
+        color: #FFF;
+        padding-top: Csize(30);
+        a {
+            display: inline-block;
+            img {
+                width: Csize(80);
+                height: Csize(80);
+                border-radius: 50%;
+                margin-left: Csize(30);
+                margin-right: Csize(30);
+            }
+            span {
+                display: inline-block;
+                font-size: Csize(32);
+                color: #FFF;
+                line-height: Csize(90);
+                vertical-align: top;
+            }
+        }
+        .money {
+            padding: Csize(60) 0 Csize(150);
+            p.text {
+                font-size: Csize(36);
+            }
+            p.number {
+                font-size: Csize(40);
+                margin-top: Csize(40);
+            }
+        }
+    }
+    .center {
+        display: flex;
+        background-color: #fff;
+        padding: Csize(30) 0;
+        border-bottom: 1px solid #ccc;
+        .center-left{
+            flex: 1;
+            .text{
+                font-size: Csize(36);
+                color: #ccc;
+            }
+            .number{
+                color: red;
+                font-size: Csize(32);
+                padding-top: Csize(20);
+            }
+        }
+    }
+    .content {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+       .withdraw,.recharge{
+           width: 50%;
+           float: left;
+           font-size: Csize(36);
+           border-right: 1px solid #ccc;
+           padding: Csize(30) 0;
+       }
+       .recharge{
+           border: none;
+       }
+    }
+    .user_list{
+        display: flex;
+        padding: Csize(20) 0;
+        margin: Csize(20) 0 ;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        .list{
+            flex:1;
+            i{
+                font-size: Csize(50);
+            }
+            p {
+                color: #333;
+                font-size: Csize(28);
+            }
+        }
+    }
+    .list_f {
+        padding: Csize(10) 5%;
+    i.iconR {
+        top: Csize(20);
+    }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 14px !important;
+    }
+}
